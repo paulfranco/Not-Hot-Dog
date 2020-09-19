@@ -15,5 +15,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func cameraButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "showPhotoSegue", sender: nil)
+    }
 }
 
