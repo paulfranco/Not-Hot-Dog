@@ -19,6 +19,8 @@ class PreviewViewController: UIViewController {
     }
 
     @IBAction func saveButtonPressed(_ sender: UIButton) {
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
