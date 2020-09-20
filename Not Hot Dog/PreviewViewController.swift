@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 class PreviewViewController: UIViewController {
     
@@ -14,8 +16,37 @@ class PreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photo.image = self.image
+        //photo.image = self.image
+        
+        detectPhoto(image: photo.image!)
 
+    }
+    
+    func detectPhoto(image: UIImage) {
+        guard let ciImage = CIImage(image: image) else {
+            fatalError("could not convert image")
+        }
+        // Load Model
+        guard let model = try? VNCoreMLModel(for: SqueezeNet().model) else {
+            fatalError("Cant Load the ML Model")
+        }
+        let request = VNCoreMLRequest(model: model) { (VNRequest, error) in
+            print(VNRequest.results?.first)
+            guard let results = VNRequest.results as? [VNClassificationObservation] else {
+                fatalError("Unexpected results")
+            }
+            print(results.first?.confidence)
+            print(results.first?.identifier)
+        }
+        let handler = VNImageRequestHandler(ciImage: ciImage)
+        
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async {
+            do {
+                try handler.perform([request])
+            } catch {
+                print(error)
+            }
+        }
     }
 
     @IBAction func saveButtonPressed(_ sender: UIButton) {

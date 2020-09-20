@@ -14,6 +14,7 @@
 		03CD1CD825162C9B0086F40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03CD1CD725162C9B0086F40D /* Assets.xcassets */; };
 		03CD1CDB25162C9B0086F40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CD1CD925162C9B0086F40D /* LaunchScreen.storyboard */; };
 		03CD1CE325162F810086F40D /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CD1CE225162F810086F40D /* PreviewViewController.swift */; };
+		03CD1CE52516C13C0086F40D /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 03CD1CE42516C13C0086F40D /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		03CD1CDA25162C9B0086F40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03CD1CDC25162C9B0086F40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03CD1CE225162F810086F40D /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		03CD1CE42516C13C0086F40D /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		03CD1CCD25162C9A0086F40D /* Not Hot Dog */ = {
 			isa = PBXGroup;
 			children = (
+				03CD1CE42516C13C0086F40D /* SqueezeNet.mlmodel */,
 				03CD1CCE25162C9A0086F40D /* AppDelegate.swift */,
 				03CD1CD025162C9A0086F40D /* SceneDelegate.swift */,
 				03CD1CD225162C9A0086F40D /* ViewController.swift */,
@@ -142,6 +145,7 @@
 			files = (
 				03CD1CD325162C9A0086F40D /* ViewController.swift in Sources */,
 				03CD1CCF25162C9A0086F40D /* AppDelegate.swift in Sources */,
+				03CD1CE52516C13C0086F40D /* SqueezeNet.mlmodel in Sources */,
 				03CD1CD125162C9A0086F40D /* SceneDelegate.swift in Sources */,
 				03CD1CE325162F810086F40D /* PreviewViewController.swift in Sources */,
 			);
