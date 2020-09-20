@@ -59,7 +59,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotdog" translatesAutoresizingMaskIntoConstraints="NO" id="YDP-6I-Bme">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="YDP-6I-Bme">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGU-MT-R3y">
@@ -95,13 +95,22 @@
                                     <constraint firstItem="9iO-k3-p3E" firstAttribute="top" secondItem="TGU-MT-R3y" secondAttribute="top" constant="15" id="pOr-RJ-pgk"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-ga-e98">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="o71-ar-iOD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xvn-25-eGq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nKK-ga-e98" firstAttribute="trailing" secondItem="Xvn-25-eGq" secondAttribute="trailing" id="8Py-z9-3Tj"/>
                             <constraint firstItem="TGU-MT-R3y" firstAttribute="top" secondItem="Uxu-XP-ZpH" secondAttribute="top" id="G9f-va-j3W"/>
                             <constraint firstItem="YDP-6I-Bme" firstAttribute="leading" secondItem="Uxu-XP-ZpH" secondAttribute="leading" id="M0a-Ch-Ls4"/>
+                            <constraint firstItem="nKK-ga-e98" firstAttribute="top" secondItem="Uxu-XP-ZpH" secondAttribute="top" id="PO7-vd-FVf"/>
                             <constraint firstAttribute="bottom" secondItem="YDP-6I-Bme" secondAttribute="bottom" id="RFB-RM-Fws"/>
+                            <constraint firstItem="nKK-ga-e98" firstAttribute="leading" secondItem="Xvn-25-eGq" secondAttribute="leading" id="S4J-CM-MHQ"/>
                             <constraint firstItem="YDP-6I-Bme" firstAttribute="top" secondItem="Uxu-XP-ZpH" secondAttribute="top" id="coP-kZ-Cqa"/>
                             <constraint firstItem="YDP-6I-Bme" firstAttribute="trailing" secondItem="Xvn-25-eGq" secondAttribute="trailing" id="dcV-HE-jYo"/>
                             <constraint firstItem="TGU-MT-R3y" firstAttribute="leading" secondItem="Xvn-25-eGq" secondAttribute="leading" id="nFG-hP-O5a"/>
@@ -111,6 +120,7 @@
                     <navigationItem key="navigationItem" id="bP2-Vi-Cmc"/>
                     <connections>
                         <outlet property="photo" destination="YDP-6I-Bme" id="oQB-B3-QVK"/>
+                        <outlet property="resultPhoto" destination="nKK-ga-e98" id="p0F-wS-cON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47V-Ix-QLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -119,7 +129,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hotdog" width="582" height="437"/>
+        <image name="pizza" width="1024" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
