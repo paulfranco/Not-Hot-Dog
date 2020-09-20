@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i1C-Nf-rwZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
@@ -59,7 +59,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="YDP-6I-Bme">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YDP-6I-Bme">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGU-MT-R3y">
@@ -96,11 +96,33 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-ga-e98">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="o71-ar-iOD"/>
+                                    <constraint firstAttribute="height" constant="150" id="o71-ar-iOD"/>
                                 </constraints>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luO-uh-iDA">
+                                <rect key="frame" x="158" y="820" width="98" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="No Thanks">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6b-Bf-1oY">
+                                <rect key="frame" x="97" y="750" width="220" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="8Va-kp-wlc"/>
+                                    <constraint firstAttribute="height" constant="50" id="xCs-DR-jxV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="i1C-Nf-rwZ" eventType="touchUpInside" id="YxD-Jx-seg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xvn-25-eGq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,15 +134,21 @@
                             <constraint firstAttribute="bottom" secondItem="YDP-6I-Bme" secondAttribute="bottom" id="RFB-RM-Fws"/>
                             <constraint firstItem="nKK-ga-e98" firstAttribute="leading" secondItem="Xvn-25-eGq" secondAttribute="leading" id="S4J-CM-MHQ"/>
                             <constraint firstItem="YDP-6I-Bme" firstAttribute="top" secondItem="Uxu-XP-ZpH" secondAttribute="top" id="coP-kZ-Cqa"/>
+                            <constraint firstAttribute="bottom" secondItem="luO-uh-iDA" secondAttribute="bottom" constant="40" id="dLF-aI-6e5"/>
                             <constraint firstItem="YDP-6I-Bme" firstAttribute="trailing" secondItem="Xvn-25-eGq" secondAttribute="trailing" id="dcV-HE-jYo"/>
+                            <constraint firstItem="p6b-Bf-1oY" firstAttribute="centerX" secondItem="Uxu-XP-ZpH" secondAttribute="centerX" id="kr9-91-hfw"/>
                             <constraint firstItem="TGU-MT-R3y" firstAttribute="leading" secondItem="Xvn-25-eGq" secondAttribute="leading" id="nFG-hP-O5a"/>
                             <constraint firstItem="TGU-MT-R3y" firstAttribute="trailing" secondItem="Xvn-25-eGq" secondAttribute="trailing" id="poV-Re-VvE"/>
+                            <constraint firstItem="luO-uh-iDA" firstAttribute="centerX" secondItem="Uxu-XP-ZpH" secondAttribute="centerX" id="s8K-Ti-tRh"/>
+                            <constraint firstItem="luO-uh-iDA" firstAttribute="top" secondItem="p6b-Bf-1oY" secondAttribute="bottom" constant="20" id="vB7-RO-VjU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bP2-Vi-Cmc"/>
                     <connections>
+                        <outlet property="cancelBtn" destination="luO-uh-iDA" id="EEn-AQ-16B"/>
                         <outlet property="photo" destination="YDP-6I-Bme" id="oQB-B3-QVK"/>
                         <outlet property="resultPhoto" destination="nKK-ga-e98" id="p0F-wS-cON"/>
+                        <outlet property="shareButton" destination="p6b-Bf-1oY" id="I5o-l4-YDq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47V-Ix-QLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -129,7 +157,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pizza" width="1024" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
